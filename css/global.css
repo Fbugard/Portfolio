@@ -1,0 +1,286 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    color: #fafafa;
+    background: rgb(48, 46, 46);
+}
+
+h1, h2, h3, p{
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.subtitulo {
+  font-size: 8rem;
+  line-height: 1;
+  word-break: break-all;
+  max-width: 5ch;
+}
+
+@media (max-width: 800px) {
+  .subtitulo {
+    font-size: 3rem;
+    text-transform: capitalize;
+    max-width: initial !important;
+  }
+}
+
+/*header.css*/
+.header {
+  padding: 50px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(252, 252, 252);
+}
+
+.header-menu {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.header-menu a {
+  font-size: 1.125rem;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.header-menu a:hover {
+  color: #fffdfc;
+  text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+  .header {
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+  }
+
+  .header-menu a {
+    background: #f5f5f5;
+    border-radius: 4px;
+    color: #fdfbfb;
+  }
+}
+
+/*introducao.css*/
+.introducao {
+  max-width: 1200px;
+  padding: 100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.introducao img {
+  border-radius: 50%;
+  width: 400;
+  height: 400;
+}
+
+.introducao h2 {
+  font-size: 4.5rem;
+  line-height: 1.125;
+  margin-bottom: 30px;
+}
+
+.introducao p {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+/* Até 1000px (apenas diminui fonte) */
+@media (max-width: 1000px) {
+  .introducao h2 {
+    font-size: 3rem;
+  }
+}
+
+/* Até 800px → vira COLUNA (imagem em cima, texto embaixo) */
+@media (max-width: 800px) {
+  .introducao {
+    grid-template-columns: 1fr; /* agora vira coluna */
+    text-align: center; /* deixa centralizado */
+  }
+
+  .introducao img {
+    margin: 0 auto; /* centraliza a imagem */
+  }
+
+  .introducao h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Até 400px → só esconde se quiser mesmo */
+@media (max-width: 400px) {
+  .introducao img {
+    display: none; /* opcional */
+  }
+}
+
+
+/*formacao.css*/
+.sobre_mim {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+}
+
+.sobre_mim .subtitulo {
+  font-size: 120px;
+  color: #fcfcfc;
+}
+
+.sobre_mim_texto {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  max-width: 45ch;
+  margin-bottom: 60px;
+  color: rgb(247, 245, 245);
+}
+
+.sobre_mim_texto strong {
+  color: #fafafa;
+  text-transform: uppercase;
+}
+
+@media (max-width: 800px) {
+  .sobre_mim {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: left;
+  }
+
+  .sobre_mim .subtitulo {
+    font-size: 3rem;
+    max-width: initial;
+  }
+
+  .sobre_mim_texto {
+    font-size: 1.25rem;
+  }
+}
+
+/*skills.css*/
+.skills {
+  background: rgb(48, 46, 46)
+  color: white;
+  text-align: center;
+  padding: 100px;
+}
+
+.subtitulo_skills {
+  font-size: 50px;
+}
+
+.skills p {
+  padding: 0 50px;
+}
+
+.img_skills {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.img_skills img {
+  width: 90px;   /* tamanho das imagens */
+  height: 90px;
+  object-fit: contain;
+}
+
+.skills p {
+  font-size: 1.5rem;
+  padding: 20px 150px 50px 150px;
+  margin-top: 20px;
+}
+
+@media (max-width: 800px){
+  .skills {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: left;
+    padding: 20px;
+  }
+
+  .skills .img_skills {
+    justify-content: flex-start; /* joga pro canto esquerdo */
+    align-items: center;         /* mantém alinhado verticalmente */
+    margin: 30px 30px 30px 0px;
+  }
+
+  .skills p {
+    padding: 5px 100px 5px 5px;
+  }
+}
+
+/*footer.css*/
+.footer {
+  background: rgb(48, 46, 46)
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.footer-contatos {
+  font-size: 2.25rem;
+  margin-bottom: 15px;
+}
+
+.footer-icones {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+}
+
+.footer-icones a {
+  display: inline-block;
+  padding: 10px;
+  font-size: 20px;
+  width: 20px;
+  text-align: center;
+  border-radius: 50%;
+  background: white;
+  color: rgb(48, 46, 46);
+}
+
+.footer-icones a:hover {
+  opacity: 0.7;
+}
+
+.footer-copy {
+  margin-top: 30px;
+  font-size: 1.125rem;
+  color: #ffffff;
+}
